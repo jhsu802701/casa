@@ -1,0 +1,18 @@
+#!/bin/bash
+set +e
+
+
+echo '----------------------------------------------'
+echo 'BEGIN: docker-compose run web rails db:migrate'
+echo '----------------------------------------------'
+docker-compose run web rails db:migrate
+echo '--------------------------------------------'
+echo 'END: docker-compose run web rails db:migrate'
+echo '--------------------------------------------'
+
+echo '########################'
+echo 'BEGIN: docker-compose up'
+echo '########################'
+echo 'View this app in your web browser at'
+echo 'http://localhost:3000/'
+docker-compose up
